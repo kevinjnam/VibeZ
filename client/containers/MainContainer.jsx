@@ -95,7 +95,9 @@ class MainContainer extends Component {
       <div className='main'>
         <div className='channelID'>
           <span>Channel: </span>
-          <select onChange={e => {this.updateChannel(e)}}>
+          <select
+           onChange={e => {this.updateChannel(e)}}
+           disabled={channels.length === 0}>
             {channels}
           </select>
         </div>
